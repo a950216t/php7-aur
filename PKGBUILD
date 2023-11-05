@@ -13,19 +13,19 @@
 # AUR php55 Original maintainer: Raphaël Doursenaud <rdoursenaud@gmail.com>
 # AUR php53 Original maintainer: Felix Yan <felixonmars@archlinux.org>
 ###############################################################################
-_phpbase="74"
+_phpbase="7"
 _suffix=""
 pkgver="7.4.33"
 pkgrel="4"
-pkgbase="php74"
+pkgbase="php7"
 pkgdesc="PHP 7.4.33 compiled as to not conflict with mainline php"
 _cppflags=" -DU_USING_ICU_NAMESPACE=1  -DU_DEFINE_FALSE_AND_TRUE=1 "
 _build_apache_cfg="etc/httpd/conf/extra"
 _build_bundled_gd="0"
-_build_conf_d="etc/php74/conf.d"
+_build_conf_d="etc/php7/conf.d"
 _build_forced_openssl_11="1"
-_build_fpm_name="php-fpm74"
-_build_fpm_service_name="php74-fpm"
+_build_fpm_name="php-fpm7"
+_build_fpm_service_name="php7-fpm"
 _build_icu_src_dir="icu/source"
 _build_ini_per_sapi="0"
 _build_mysql_socket="/run/mysqld/mysqld.sock"
@@ -33,13 +33,13 @@ _build_openssl_v10_patch="0"
 _build_openssl_v11_patch="0"
 _build_per_sapi="0"
 _build_phpdbg="1"
-_build_sapi_ini_apache="etc/php74"
-_build_sapi_ini_cgi="etc/php74"
-_build_sapi_ini_cli="etc/php74"
-_build_sapi_ini_embed="etc/php74"
-_build_sapi_ini_fpm="etc/php74"
-_build_sapi_ini_litespeed="etc/php74"
-_build_sapi_ini_phpdbg="etc/php74"
+_build_sapi_ini_apache="etc/php7"
+_build_sapi_ini_cgi="etc/php7"
+_build_sapi_ini_cli="etc/php7"
+_build_sapi_ini_embed="etc/php7"
+_build_sapi_ini_fpm="etc/php7"
+_build_sapi_ini_litespeed="etc/php7"
+_build_sapi_ini_phpdbg="etc/php7"
 _build_sapi_litespeed="--enable-litespeed"
 _build_shared_gd="1"
 _build_shared_json="1"
@@ -64,66 +64,66 @@ _priority_xml="15"
 _suffix=""
 _suffix_so="7"
 pkgname=(
-    "php74"
-    "php74-cli"
-    "php74-cgi"
-    "php74-fpm"
-    "php74-embed"
-    "php74-apache"
-    "php74-litespeed"
-    "php74-pear"
-    "php74-pecl"
-    "php74-phpdbg"
-    "php74-xml"
-    "php74-xsl"
-    "php74-xmlreader"
-    "php74-xmlwriter"
-    "php74-dom"
-    "php74-simplexml"
-    "php74-openssl"
-    "php74-pdo"
-    "php74-mysql"
-    "php74-phar"
-    "php74-pcntl"
-    "php74-posix"
-    "php74-shmop"
-    "php74-sockets"
-    "php74-sysvmsg"
-    "php74-sysvsem"
-    "php74-sysvshm"
-    "php74-tokenizer"
-    "php74-dba"
-    "php74-pgsql"
-    "php74-odbc"
-    "php74-firebird"
-    "php74-dblib"
-    "php74-sqlite"
-    "php74-gd"
-    "php74-exif"
-    "php74-tidy"
-    "php74-iconv"
-    "php74-bcmath"
-    "php74-gmp"
-    "php74-zip"
-    "php74-bz2"
-    "php74-json"
-    "php74-fileinfo"
-    "php74-ctype"
-    "php74-mbstring"
-    "php74-pspell"
-    "php74-enchant"
-    "php74-intl"
-    "php74-calendar"
-    "php74-gettext"
-    "php74-soap"
-    "php74-ftp"
-    "php74-curl"
-    "php74-snmp"
-    "php74-ldap"
-    "php74-imap"
-    "php74-sodium"
-    "php74-ffi"
-    "php74-opcache"
+    "php7"
+    "php7-cli"
+    "php7-cgi"
+    "php7-fpm"
+    "php7-embed"
+    "php7-apache"
+    "php7-litespeed"
+    "php7-pear"
+    "php7-pecl"
+    "php7-phpdbg"
+    "php7-xml"
+    "php7-xsl"
+    "php7-xmlreader"
+    "php7-xmlwriter"
+    "php7-dom"
+    "php7-simplexml"
+    "php7-openssl"
+    "php7-pdo"
+    "php7-mysql"
+    "php7-phar"
+    "php7-pcntl"
+    "php7-posix"
+    "php7-shmop"
+    "php7-sockets"
+    "php7-sysvmsg"
+    "php7-sysvsem"
+    "php7-sysvshm"
+    "php7-tokenizer"
+    "php7-dba"
+    "php7-pgsql"
+    "php7-odbc"
+    "php7-firebird"
+    "php7-dblib"
+    "php7-sqlite"
+    "php7-gd"
+    "php7-exif"
+    "php7-tidy"
+    "php7-iconv"
+    "php7-bcmath"
+    "php7-gmp"
+    "php7-zip"
+    "php7-bz2"
+    "php7-json"
+    "php7-fileinfo"
+    "php7-ctype"
+    "php7-mbstring"
+    "php7-pspell"
+    "php7-enchant"
+    "php7-intl"
+    "php7-calendar"
+    "php7-gettext"
+    "php7-soap"
+    "php7-ftp"
+    "php7-curl"
+    "php7-snmp"
+    "php7-ldap"
+    "php7-imap"
+    "php7-sodium"
+    "php7-ffi"
+    "php7-opcache"
 )
 source=(
     "make-tests.patch"
@@ -192,7 +192,7 @@ makedepends=(
     "net-snmp"
     "libsasl"
     "libldap"
-    "c-client"
+    #"c-client"
     "pam"
     "libsodium"
     "libffi"
@@ -214,20 +214,20 @@ _sapi_depends=(
     "argon2"
 )
 _ext_depends_snmp=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "net-snmp"
     "openssl-1.1"
 )
 _ext_depends_ftp=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "openssl-1.1"
 )
 _ext_depends_intl=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "icu"
 )
 _ext_depends_imap=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "pam"
     "krb5"
     "c-client"
@@ -235,45 +235,45 @@ _ext_depends_imap=(
     "openssl-1.1"
 )
 _ext_depends_gd=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "gd"
 )
 _ext_depends_mysql=(
-    "php74=7.4.33"
-    "php74-pdo=7.4.33"
-    "php74-openssl=7.4.33"
+    "php7=7.4.33"
+    "php7-pdo=7.4.33"
+    "php7-openssl=7.4.33"
 )
 _ext_depends_dba=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "db5.3"
     "lmdb"
 )
 _ext_depends_odbc=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "unixodbc"
-    "php74-pdo=7.4.33"
+    "php7-pdo=7.4.33"
 )
 _ext_depends_pgsql=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "postgresql-libs"
-    "php74-pdo=7.4.33"
+    "php7-pdo=7.4.33"
 )
 _ext_depends_firebird=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "libfbclient"
-    "php74-pdo=7.4.33"
+    "php7-pdo=7.4.33"
 )
 _ext_depends_sqlite=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "sqlite"
-    "php74-pdo=7.4.33"
+    "php7-pdo=7.4.33"
 )
 _ext_depends_mbstring=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "oniguruma"
 )
 _ext_depends_openssl=(
-    "php74=7.4.33"
+    "php7=7.4.33"
     "krb5"
     "e2fsprogs"
     "openssl-1.1"
@@ -458,7 +458,7 @@ prepare() {
         patch -p1 -i "../${patch_name}"
     done
 
-    if ((_phpbase <= 53)); then
+    if ((_phpbase == 53)); then
         PHP_AUTOCONF="/usr/bin/autoconf-2.13" ./buildconf --force
     else
         ./buildconf --force
@@ -679,7 +679,7 @@ check() {
     export SKIP_ONLINE_TESTS=1
     export SKIP_SLOW_TESTS=1
     export TESTS='tests Zend'
-    if ((_phpbase > 73)); then
+    if ((_phpbase == 7)); then
         export TEST_PHP_ARGS="-j$(nproc)"
     fi
     # Patch tests to run PHP modules in needed order
@@ -750,7 +750,7 @@ _install_module() {
 ###############################################################################
 
 # Main package
-package_php74() {
+package_php7() {
     # Binary names
     pkgdesc='PHP. A general-purpose scripting language that is especially suited to web development'
     depends=('zlib' 'pcre' 'libedit')
@@ -800,7 +800,7 @@ package_php74() {
 }
 
 # Cli + phar
-package_php74-cli() {
+package_php7-cli() {
     _sapi="cli"
     pkgdesc="cli (command-line executable) version for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -820,7 +820,7 @@ package_php74-cli() {
 # End cli
 
 # CGI
-package_php74-cgi() {
+package_php7-cgi() {
     _sapi="cgi"
     pkgdesc="CGI and FCGI SAPI for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -847,7 +847,7 @@ package_php74-cgi() {
 # CGI end
 
 # Apache
-package_php74-apache() {
+package_php7-apache() {
     _sapi="apache"
     _build_mod_php_so="libphp${_suffix_so}.so"
     _build_mod_php_module="php_module${_suffix_so}"
@@ -885,14 +885,14 @@ package_php74-apache() {
 # Apache end
 
 # FPM
-package_php74-fpm() {
+package_php7-fpm() {
     _sapi="fpm"
     install="php-fpm.install"
     pkgdesc="FastCGI Process Manager for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'systemd-libs' 'acl')
     depends+=("${_sapi_depends[@]}")
     backup=("${_build_sapi_ini_fpm}/php-fpm.conf")
-    if ((_phpbase >= 70)); then
+    if ((_phpbase == 7)); then
         backup+=("${_build_sapi_ini_fpm}/php-fpm.d/www.conf")
     fi
     options=('!emptydirs')
@@ -915,7 +915,7 @@ package_php74-fpm() {
 # FPM end
 
 # embed sapi
-package_php74-embed() {
+package_php7-embed() {
     _sapi="embed"
     pkgdesc="Embedded PHP SAPI library for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'ncurses' 'systemd-libs' 'libxcrypt' 'acl' 'ncurses')
@@ -932,14 +932,14 @@ package_php74-embed() {
         backup=("${_build_sapi_ini_embed}/php.ini")
     fi
     make -j1 INSTALL_ROOT="${pkgdir}" PHP_SAPI=embed install-sapi
-    mv "${pkgdir}/usr/lib/libphp${_suffix_so}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
+    #mv "${pkgdir}/usr/lib/libphp${_suffix_so}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
     popd
     patchelf --set-soname "lib${pkgbase}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
 }
 # embed sapi end
 
 # phpdbg sapi
-package_php74-phpdbg() {
+package_php7-phpdbg() {
     _sapi="phpdbg"
     options=('!emptydirs')
     pkgdesc="Interactive PHP debugger for ${pkgbase} ($_sapi)"
@@ -961,7 +961,7 @@ package_php74-phpdbg() {
 # phpdbg sapi end
 
 # litespeed sapi
-package_php74-litespeed() {
+package_php7-litespeed() {
     _sapi="litespeed"
     pkgdesc="LiteSpeed SAPI for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -989,7 +989,7 @@ package_php74-litespeed() {
 ###############################################################################
 
 # PEAR
-package_php74-pear() {
+package_php7-pear() {
     pkgdesc="PHP Extension and Application Repository (PEAR) for ${pkgbase}"
     depends=(
         "${pkgbase}=${pkgver}"
@@ -1056,7 +1056,7 @@ package_php74-pear() {
 # PEAR end
 
 # PECL
-package_php74-pecl() {
+package_php7-pecl() {
     pkgdesc="PHP Extension Community Library (PECL) for ${pkgbase}"
     depends=("php${_phpbase}-pear${_suffix}=${pkgver}")
     _target="${pkgbase/php/pecl}"
@@ -1069,21 +1069,21 @@ package_php74-pecl() {
 ###############################################################################
 
 # OpenSSL
-package_php74-openssl() {
+package_php7-openssl() {
     pkgdesc="OpenSSL module for ${pkgbase}"
     depends=("${_ext_depends_openssl[@]}")
     _install_module openssl
 }
 
 # Json
-package_php74-json() {
+package_php7-json() {
     pkgdesc="json module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
     _install_module json
 }
 
 # pdo
-package_php74-pdo() {
+package_php7-pdo() {
     pkgdesc="pdo module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module pdo
@@ -1091,7 +1091,7 @@ package_php74-pdo() {
 
 
 # mbstring
-package_php74-mbstring() {
+package_php7-mbstring() {
     pkgdesc="mbstring module for ${pkgbase}"
     depends=("${_ext_depends_mbstring[@]}")
    _install_module mbstring
@@ -1099,7 +1099,7 @@ package_php74-mbstring() {
 
 
 # phar
-package_php74-phar() {
+package_php7-phar() {
     pkgdesc="phar module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module phar
@@ -1111,51 +1111,51 @@ package_php74-phar() {
 ###############################################################################
 
 # XML modules combined package
-package_php74-xml() {
+package_php7-xml() {
     pkgdesc="xml modules for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module xml
 }
 
-package_php74-wddx() {
+package_php7-wddx() {
     pkgdesc="wddx module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module wddx
 }
 
-package_php74-simplexml() {
+package_php7-simplexml() {
     pkgdesc="simplexml module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module simplexml
 }
 
-package_php74-dom() {
+package_php7-dom() {
     pkgdesc="dom module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module dom
 }
 
-package_php74-xmlreader() {
+package_php7-xmlreader() {
     pkgdesc="xmlreader module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module xmlreader
 }
 
-package_php74-xmlwriter() {
+package_php7-xmlwriter() {
     pkgdesc="xmlwriter module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module xmlwriter
 }
 
 # Tidy
-package_php74-tidy() {
+package_php7-tidy() {
     pkgdesc="tidy module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'tidy')
     _install_module tidy
 }
 
 # XSL
-package_php74-xsl() {
+package_php7-xsl() {
     pkgdesc="xsl module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}" "php${_phpbase}-dom${_suffix}=${pkgver}")
     depends+=('libxslt')
@@ -1167,7 +1167,7 @@ package_php74-xsl() {
 ###############################################################################
 
 # MySQL
-package_php74-mysql() {
+package_php7-mysql() {
     pkgdesc="MySQL modules for ${pkgbase}"
     depends=("${_ext_depends_mysql[@]}")
     _install_module mysqlnd
@@ -1177,7 +1177,7 @@ package_php74-mysql() {
 }
 
 # pdo_sqlite + sqlite3
-package_php74-sqlite() {
+package_php7-sqlite() {
     pkgdesc="sqlite module for ${pkgbase}"
     depends=("${_ext_depends_sqlite[@]}")
     _install_module sqlite3
@@ -1185,7 +1185,7 @@ package_php74-sqlite() {
 }
 
 # ODBC
-package_php74-odbc() {
+package_php7-odbc() {
     pkgdesc="ODBC modules for ${pkgbase}"
     depends=("${_ext_depends_odbc[@]}")
     _install_module odbc
@@ -1193,7 +1193,7 @@ package_php74-odbc() {
 }
 
 # PostgreSQL
-package_php74-pgsql() {
+package_php7-pgsql() {
     pkgdesc="PostgreSQL modules for ${pkgbase}"
     depends=("${_ext_depends_pgsql[@]}")
     _install_module pgsql
@@ -1201,35 +1201,35 @@ package_php74-pgsql() {
 }
 
 # interbase
-package_php74-interbase() {
+package_php7-interbase() {
     pkgdesc="interbase module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "libfbclient")
     _install_module interbase
 }
 
 # firebird
-package_php74-firebird() {
+package_php7-firebird() {
     pkgdesc="pdo_firebird module for ${pkgbase}"
     depends=("${_ext_depends_firebird[@]}")
     _install_module pdo_firebird
 }
 
 # pdo_dblib
-package_php74-dblib() {
+package_php7-dblib() {
     depends=("${pkgbase}=${pkgver}" 'freetds')
     pkgdesc="pdo_dblib module for ${pkgbase}"
     _install_module pdo_dblib
 }
 
 # mssql
-package_php74-mssql() {
+package_php7-mssql() {
     depends=("${pkgbase}=${pkgver}" 'freetds')
     pkgdesc="mssql module for ${pkgbase}"
     _install_module mssql
 }
 
 # Dba
-package_php74-dba() {
+package_php7-dba() {
     pkgdesc="dba module for ${pkgbase}"
     depends=("${_ext_depends_dba[@]}")
     _install_module dba
@@ -1240,7 +1240,7 @@ package_php74-dba() {
 ###############################################################################
 
 # Intl
-package_php74-intl() {
+package_php7-intl() {
     pkgdesc="intl module for ${pkgbase}"
     depends=("${_ext_depends_intl[@]}")
     if ((_build_with_custom_icu)); then
@@ -1251,28 +1251,28 @@ package_php74-intl() {
 }
 
 # Recode
-package_php74-recode() {
+package_php7-recode() {
     pkgdesc="recode module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'recode')
     _install_module recode
 }
 
 # gettext
-package_php74-gettext() {
+package_php7-gettext() {
     pkgdesc="gettext module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module gettext
 }
 
 # iconv
-package_php74-iconv() {
+package_php7-iconv() {
     pkgdesc="iconv module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module iconv
 }
 
 # calendar
-package_php74-calendar() {
+package_php7-calendar() {
     pkgdesc="calendar module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module calendar
@@ -1284,21 +1284,21 @@ package_php74-calendar() {
 ###############################################################################
 
 # GD
-package_php74-gd() {
+package_php7-gd() {
     pkgdesc="gd module for ${pkgbase}"
     depends=("${_ext_depends_gd[@]}")
     _install_module gd
 }
 
 # exif
-package_php74-exif() {
+package_php7-exif() {
     pkgdesc="exif module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module exif
 }
 
 # fileinfo
-package_php74-fileinfo() {
+package_php7-fileinfo() {
     pkgdesc="fileinfo module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module fileinfo
@@ -1310,14 +1310,14 @@ package_php74-fileinfo() {
 ###############################################################################
 
 # bcmath
-package_php74-bcmath() {
+package_php7-bcmath() {
     pkgdesc="bcmath module for ${pkgbase}"
     depends=("${pkgbase}")
     _install_module bcmath
 }
 
 # gmp
-package_php74-gmp() {
+package_php7-gmp() {
     pkgdesc="gmp module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'gmp')
     _install_module gmp
@@ -1328,14 +1328,14 @@ package_php74-gmp() {
 ###############################################################################
 
 # Enchant
-package_php74-enchant() {
+package_php7-enchant() {
     pkgdesc="enchant module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'enchant' 'libvoikko' 'hspell' 'hunspell' 'nuspell' 'aspell')
     _install_module enchant
 }
 
 # Pspell
-package_php74-pspell() {
+package_php7-pspell() {
     pkgdesc="pspell module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'aspell')
     _install_module pspell
@@ -1346,14 +1346,14 @@ package_php74-pspell() {
 ###############################################################################
 
 # bz2
-package_php74-bz2() {
+package_php7-bz2() {
     pkgdesc="bz2 module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'bzip2')
     _install_module bz2
 }
 
 # Zip
-package_php74-zip() {
+package_php7-zip() {
     pkgdesc="zip module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libzip')
     _install_module zip
@@ -1364,56 +1364,56 @@ package_php74-zip() {
 ###############################################################################
 
 # curl
-package_php74-curl() {
+package_php7-curl() {
     pkgdesc="curl module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "curl")
     _install_module curl
 }
 
 # SOAP
-package_php74-soap() {
+package_php7-soap() {
     pkgdesc="soap module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module soap
 }
 
 # FTP
-package_php74-ftp() {
+package_php7-ftp() {
     pkgdesc="FTP module for ${pkgbase}"
     depends=("${_ext_depends_ftp[@]}")
     _install_module ftp
 }
 
 # ldap
-package_php74-ldap() {
+package_php7-ldap() {
     pkgdesc="ldap module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libldap' 'libsasl')
     _install_module ldap
 }
 
 # SNMP
-package_php74-snmp() {
+package_php7-snmp() {
     pkgdesc="snmp module for ${pkgbase}"
     depends=("${_ext_depends_snmp[@]}")
     _install_module snmp
 }
 
 # XML-RPC
-package_php74-xmlrpc() {
+package_php7-xmlrpc() {
     pkgdesc="xmlrpc module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module xmlrpc
 }
 
 # Imap
-package_php74-imap() {
+package_php7-imap() {
     pkgdesc="imap module for ${pkgbase}"
     depends=("${_ext_depends_imap[@]}")
    _install_module imap
 }
 
 # sockets
-package_php74-sockets() {
+package_php7-sockets() {
     pkgdesc="sockets module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sockets
@@ -1424,14 +1424,14 @@ package_php74-sockets() {
 ###############################################################################
 
 # Sodium
-package_php74-sodium() {
+package_php7-sodium() {
     pkgdesc="sodium (libsodium) module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "libsodium")
     _install_module sodium
 }
 
 # Mcrypt
-package_php74-mcrypt() {
+package_php7-mcrypt() {
     pkgdesc="mcrypt module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libmcrypt')
     _install_module mcrypt
@@ -1443,7 +1443,7 @@ package_php74-mcrypt() {
 ###############################################################################
 
 # Opcache
-package_php74-opcache() {
+package_php7-opcache() {
     pkgdesc="opcache zend module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
     _install_module opcache
@@ -1454,42 +1454,42 @@ package_php74-opcache() {
 ###############################################################################
 
 # posix
-package_php74-posix() {
+package_php7-posix() {
     pkgdesc="posix module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module posix
 }
 
 # pcntl
-package_php74-pcntl() {
+package_php7-pcntl() {
     pkgdesc="pcntl module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module pcntl
 }
 
 # shmop
-package_php74-shmop() {
+package_php7-shmop() {
     pkgdesc="shmop module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module shmop
 }
 
 # sysvmsg
-package_php74-sysvmsg() {
+package_php7-sysvmsg() {
     pkgdesc="sysvmsg module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvmsg
 }
 
 # sysvsem
-package_php74-sysvsem() {
+package_php7-sysvsem() {
     pkgdesc="sysvsem module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvsem
 }
 
 # sysvshm
-package_php74-sysvshm() {
+package_php7-sysvshm() {
     pkgdesc="sysvshm module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvshm
@@ -1500,28 +1500,28 @@ package_php74-sysvshm() {
 ###############################################################################
 
 # Ffi
-package_php74-ffi() {
+package_php7-ffi() {
     pkgdesc="ffi module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libffi')
    _install_module ffi
 }
 
 # ctype
-package_php74-ctype() {
+package_php7-ctype() {
     pkgdesc="ctype module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module ctype
 }
 
 # tokenizer
-package_php74-tokenizer() {
+package_php7-tokenizer() {
     pkgdesc="tokenizer module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module tokenizer
 }
 
 # libedit/readline
-package_php74-readline() {
+package_php7-readline() {
     pkgdesc="readline (libedit version) module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libedit')
    _install_module readline
