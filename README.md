@@ -15,7 +15,7 @@ cd ..
 
 git clone --recursive https://github.com/a950216t/php7-aur
 
-cd php5-aur/
+cd php7-aur/
 
 makepkg -g >> PKGBUILD
 
